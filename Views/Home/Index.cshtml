@@ -1,0 +1,38 @@
+﻿@model Survey
+<div class="formdisplay">
+    <form asp-action="Create" asp-controller="Home" method="post">
+    <div class="form-group">
+        
+<label> Enter Name</label>        
+<input asp-for="Name" class="form-control" />
+<span asp-validation-for="Name"></span>
+
+<label asp-for="Location" Selected="True">Select Dojo Location</label>
+<select name="Location">
+    <option value="Austin">Austin</option>
+    <option value="San Jose">San Jose</option>
+    <option value="McLean">McLean</option>
+</select>
+<span asp-validation-for="Location"></span>
+<label asp-for="Language" Selected="True">Favorite Language:</label>
+<select name="Language">
+    <option value="C#">C#</option>
+    <option value="Python">Python</option>
+    <option value="Mern">Mern</option>
+</select>
+<span asp-validation-for="Language"></span>
+
+<label asp-for="Comment">Comment(Optional):</label>
+<textarea name="Comment" rows="10" cols="50"></textarea>
+<span asp-validation-for="Comment"></span>
+</div>
+
+
+
+
+
+
+    <input type="submit" class="btn btn-primary" />    
+</form>
+</div>    
+

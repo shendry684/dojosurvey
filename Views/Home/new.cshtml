@@ -1,0 +1,21 @@
+@model Survey
+<div class="formdisplay" >
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" value="0" class="form-control" />
+        <span asp-validation-for="Name"></span>
+<div align="center">
+<select name="dojolocation">
+<option value="Austin">Austin</option>
+<option value="San Jose">San Jose</option>
+<option value="McLean">McLean</option>
+</select>
+<select name="Language">
+<option value="C#">C#</option>
+<option value="Python">Python</option>
+<option value="Mern">Mern</option>
+</select>
+    <input type="submit" class="btn btn-primary" />    
+</form>
+</div>    
